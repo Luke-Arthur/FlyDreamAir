@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FlyDreamAir Loyalty Rewards</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../styles/loginStyles.css" />
+    <style>
+      /* Additional CSS for centering the registration section */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-image: url('../src/loginBg.jpg');
+        background-size: cover; /* This will cover the entire screen */
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      #registration {
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+      }
+      #registrationForm {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #registrationForm .form-group {
+        margin-bottom: 20px;
+      }
+      .text-center {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .text-center mt-3 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        
+      }
+
+      #text-center-smaller {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    
+
+    </style>
+  </head>
+  <body>
+    <!-- Registration Section -->
+    <section class="container" id="registration">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-md-6">
+          <h2 class="text-center">Sign Up for FlyDreamAir Loyalty Rewards</h2>
+          <form id="registrationForm">
+            <div class="form-group">
+              <label for="fullName"> Full Name: </label>
+              <input
+                class="form-control"
+                id="fullName"
+                placeholder="Enter your full name"
+                required=""
+                type="text"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email"> Email Address: </label>
+              <input
+                class="form-control"
+                id="email"
+                placeholder="Enter your email address"
+                required=""
+                type="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password"> Password: </label>
+              <input
+                class="form-control"
+                id="password"
+                placeholder="Enter your password"
+                required=""
+                type="password"
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword"> Confirm Password: </label>
+              <input
+                class="form-control"
+                id="confirmPassword"
+                placeholder="Confirm your password"
+                required=""
+                type="password"
+              />
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">
+              Sign Up
+            </button>
+            <hr />
+          </form>
+          <p class="text-center mt-3">
+            Already have an account?
+            <p id="text-center-smaller">
+            <a href="login.html"> Log in here </a>
+            </p>
+          </p>
+          <p id="text-center-smaller">
+            Or go back to
+            <a href="../index.html"> home </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/login.js"></script>
+  </body>
+</html>

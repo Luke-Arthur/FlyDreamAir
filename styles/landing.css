@@ -56,19 +56,20 @@ body {
 }
 
 .btn-primary {
-  background-color: #ffeb3b;
-  /* Yellow */
-  border-color: #ffeb3b;
-  /* Yellow */
+  background-color: #fbb040;
+    /* Darker Yellow */
+    border-color: #fbb040;
+    /* Darker Yellow */
   padding: 15px 30px;
   font-size: 1.25rem;
 }
 
 .btn-primary:hover {
-  background-color: #fbb040;
-  /* Darker Yellow */
-  border-color: #fbb040;
-  /* Darker Yellow */
+  
+
+  background-color: #ffeb3b;
+    /* Yellow */
+    border-color: #ffeb3b;
 }
 
 #join-now {

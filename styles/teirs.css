@@ -1,0 +1,126 @@
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+main.container-fluid {
+  flex-grow: 1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+#loyalty-tiers .card {
+  height: 100%;
+  border: 1px solid #0e0d0d;
+  border-radius: 5px;
+
+
+}
+
+#loyalty-tiers .card-header {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+#loyalty-tiers .card-body {
+  font-size: 14px;
+  line-height: 1.5;
+  
+
+}
+
+#loyalty-tiers ul {
+  list-style-type: none;
+  padding-left: 0;
+
+}
+
+#loyalty-tiers ul li:before {
+  content: "✓ ";
+  color: green;
+}
+
+#loyalty-tiers ul li {
+  padding-bottom: 30px;
+}
+
+#loyalty-tiers .card-footer {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+.card {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 18px;
+
+}
+
+#loyalty-tiers .card-body {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 20px;
+}
+
+#loyalty-tiers ul {
+  list-style-type: none;
+  padding-left: 0;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.card-footer {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+.containerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff;
+  /* White */
+}
+
+
+
+.footer {
+
+  background-color: #ffffff;
+
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+}

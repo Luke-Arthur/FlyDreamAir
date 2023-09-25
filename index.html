@@ -1,7 +1,510 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=landingPage/landing.html" />
-  </head>
-  <body></body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlyDreamAir Rewards</title>
+  <style> 
+    body,
+      html {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+      }
+
+     /* CSS for particles section */
+      #particles-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden; /* Ensure particles stay within this section */
+        z-index: 1;
+      }
+
+      /* CSS for particles container */
+      #particles-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      /* CSS for overlaying content */
+      #content-overlay {
+        position: relative;
+        z-index: 1; /* In front of the particles */
+      }
+
+      /* Example styling for the content */
+      #content-overlay h1 {
+        margin-top: 100px;
+        text-align: center;
+      }
+
+      .bgMain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+        z-index: 1;
+      }
+
+      .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .hero {
+        background: url("src\hero.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero .btn {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+      }
+
+      .join-now {
+        background: #f5f5f5;
+      }
+
+      .join-now h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .join-now p {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .join-now .btn {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+      }
+
+      .card {
+        border: none;
+        border-radius: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card .card-img-top {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .card:hover .card-img-top {
+        transform: scale(1.1);
+      }
+
+      .card .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .card .card-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .card .price {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .card .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .card .btn:hover {
+        background: #000;
+      }
+
+      .navbar {
+        padding: 0.5rem 1rem;
+      }
+
+      .navbar .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .hero text-center py-5 {
+        background: url("src\hero.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      
+
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.  15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" />
+<link rel="stylesheet" href="styles/landing.css"/>
+  
+</head>
+
+<body>
+
+   <!-- Wrap other contents -->
+  <div id="content-overlay">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">FlyDreamAir</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#featured-products">Featured Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#bestsellers">Bestsellers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#categories">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="template/teirs.html">Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="template/login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <section id="particles-section">
+    <div id="particles-container"></div>
+  <section class="hero text-center py-5" >
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <h1 class="display-4">Welcome to FlyDreamAir Rewards</h1>
+          <p class="lead">Unlock incredible benefits and rewards with our exclusive miles-based loyalty program.</p>
+          <a class="btn btn-primary btn-lg" href="#join-now">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="container middle"> 
+  <div class="bgMain"></div>
+   <img alt="bgImg" src="src/bgMain.jpg" class = "bgMain"  />
+  <section class="container mt-5" id="featured-products">
+     <h2 class="text-center mb-4">Featured Products</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Product 1" class="card-img-top" src="src\product1.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">Moet Champagne</h5>
+              <p class="card-text">Moët & Chandon Impérial is a complete, generous and dynamic Champagne made of Chardonnay, Pinot Noir and Meunier. Moët Impérial is the House's iconic Champagne</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price">
+                  <h6 class="mb-0">$66.95 | 230 pts</h6>
+                </div>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Product 2" class="card-img-top" src="src\product2.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">Black Saffron</h5>
+              <p class="card-text">The smell, taste and colour of India - inspiriting brightness and warmth to the wearer.FRAGRANCE NOTES
+              Pomelo, juniper, saffron, black violet, leather, vetiver, raspberry and cashmere.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price">
+                  <h6 class="mb-0">$266 | 912 pts </h6>
+                </div>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Product 3" class="card-img-top" src="src\product3.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">Charlotte Tilbury</h5>
+              <p class="card-text"> Crafted with 3D glowing pigments, this lipstick creates the illusion of cashmere-soft, lit-from-within lips. The bullet's square, mimics the shape of a lip brush for a precise application.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price">
+                  <h6 class="mb-0">$53 | 182 pts</h6>
+                </div>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="container mt-5" id="bestsellers">
+    <h2 class="text-center mb-4">Bestsellers</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Product 4" class="card-img-top" src="src\product4.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">Giorgio Armani</h5>
+              <p class="card-text">Experience pure opulence with the seductive Armani Privé Rose d’Arabie Eau de Parfum Intense. Powerful and elegant, creating a feast for the senses. </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price">
+                  <h6 class="mb-0">$430 | 1479 pts </h6>
+                </div>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Product 5" class="card-img-top" src="src\product5.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">GUCCI - ROUGE A LEVRES SATIN</h5>
+              <p class="card-text">Gucci celebrates Chinese New Year with a limited-edition trio of red Rouge A Levres Satin lipsticks.
+
+</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price">
+                  <h6 class="mb-0">$57 | 196 pts</h6>
+                </div>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Product 6" class="card-img-top" src="src\product6.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">Mumm Champagne</h5>
+              <p class="card-text">  Mumm's quality year in, year out with an explosion of freshness in the mouth, followed by strong persistence. The complex aromas of fresh fruit, yummy.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="price">
+                  <h6 class="mb-0">$76.99 | 127 pts</h6>
+                </div>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+  </section>
+
+  <section class="container mt-5" id="categories">
+   <h2 class="text-center mb-4">Categories</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Category 1" class="card-img-top" src="src\category1.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">Cosmetics</h5>
+              <a class="btn btn-primary" href="#"> View Products </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Category 2" class="card-img-top" src="src\category2.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">Fragrances</h5>
+              <a class="btn btn-primary" href="#"> View Products </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img alt="Category 3" class="card-img-top" src="src\category3.jpg" />
+            <div class="card-body">
+              <h5 class="card-title">Alcohol</h5>
+              <a class="btn btn-primary" href="#"> View Products </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="join-now py-5" id="join-now">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+          <h2 class="display-4">Ready to Unlock Exclusive Rewards?</h2>
+          <p class="lead">Join FlyDreamAir Rewards today and start earning miles for your journey.</p>
+          <a class="btn btn-primary btn-lg" href="#">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      // Initialize particles
+      particlesJS("particles-container", {
+  "particles": {
+    "number": {
+      "value": 50,
+      "density": {
+        "enable": true,
+        "value_area": 1200
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.3,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.2,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true, // I changed this to false
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 150,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}); </script>
+
+</body>
 </html>

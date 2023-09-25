@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FlyDreamAir Loyalty Rewards</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../styles/loginStyles.css" />
+    <style>
+      /* Additional CSS for centering the login section */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-image: url('../src/loginBg.jpg');
+        background-size: cover; /* This will cover the entire screen */
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      #login {
+        max-width: 800px;
+        width: 100%;
+        padding: 20px;
+        padding-block: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+      }
+      #loginForm {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #loginForm .form-group {
+        margin-bottom: 20px;
+      }
+
+      .text-center {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      
+
+    </style>
+  </head>
+  <body>
+    <!-- Login Section -->
+    <section class="container" id="login">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-md-6">
+          <h2 class="text-center">FlyDreamAir Loyalty Rewards Login</h2>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail"> Email Address: </label>
+              <input
+                class="form-control"
+                id="loginEmail"
+                placeholder="Enter your email address"
+                required=""
+                type="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="loginPassword"> Password: </label>
+              <input
+                class="form-control"
+                id="loginPassword"
+                placeholder="Enter your password"
+                required=""
+                type="password"
+              />
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">
+              Log In
+            </button>
+          </form>
+          <p class="text-center mt-3">
+            Don't have an account?
+            <a href="rego.html"> Sign up here </a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/login.js"></script>
+  </body>
+</html>
