@@ -39,9 +39,9 @@ Please ensure your code is clean and well-commented, and thoroughly tested befor
 
 ## Project Team - Collaborators
 
-- [https://github.com/MrMoorhouse] (Luke's Github)
-- [https://github.com/Safal30] (Safal's Github)
-- [https://github.com/Ank-sabrin] (Anika's Github)
+- https://github.com/MrMoorhouse (Luke's Github)
+- https://github.com/Safal30 (Safal's Github)
+- https://github.com/Ank-sabrin (Anika's Github)
 
 
 Feel free to reach out to any team member with questions or concerns.
