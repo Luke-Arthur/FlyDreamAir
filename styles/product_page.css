@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#product-details img {
+  max-width: 100%;
+}
+
+#reviews .card {
+  margin-bottom: 20px;
+}
