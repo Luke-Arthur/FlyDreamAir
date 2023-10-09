@@ -143,6 +143,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
-    <script src="../js/login.js"></script>
+<script>
+  let user = {};
+
+  document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match!');
+      return;
+    }
+
+    user = {
+      fullName,
+      email,
+      password,
+    };
+
+    // Store the user data in localStorage
+    localStorage.setItem('user', JSON.stringify(user));
+
+    alert(`User Registered: \nFull Name: ${fullName}\nEmail: ${email}`);
+    window.location.href = 'login.html'; // Redirect to login page
+  });
+</script>
+
   </body>
 </html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+        FlyDreamAir - Products
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="catalogue.css" rel="stylesheet"/>
+    <style>
+
+        body {
+        font-family: Arial, sans-serif;
+        background-image: url('../src/planeBg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        font-family: Arial, sans-serif;
+        }
+
+        /* cards on hover*/
+        .card {
+        transition: 0.3s;
+        border-radius: 5px;
+        }
+
+        .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .card-body {
+        padding: 2px 16px;
+        }
+
+        .mb-4{
+            color: aliceblue;
+        }
+
+        .col-md-3 {
+            color: black;
+            transform: scale(0.9);
+
+        }
+
+            .col-md-3:hover .card {
+        transform: scale(1.05);
+        transform: translate(0, -10px);
+        box-shadow:10px rgba(0, 0, 0, 0.2);
+        transition: 0.2s;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        }
+
+        .card {
+        font-family: Arial, sans-serif;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(160, 154, 154, 0.2);
+        opacity:.9;
+            background-color: #f3f1f1;
+        }
+
+
+        .card-title {
+            color: black;
+            font-weight: bold;
+        }
+
+
+
+    </style>
+</head>
+<div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <a class="navbar-brand" href="../index.html">
+          <img alt="FlyDreamAir Logo" src="../src/FDA.jpg" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="catalogue.html">
+                    View Products
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="faqs.html">
+                    FAQs
+                </a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="lounge.html">
+                    Lounge
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart.html">
+                    Cart
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+    <div class="container">
+        <h1 class="display-4" style="padding-top: 20px; color: aliceblue;"  >
+            FlyDreamAir
+        </h1>
+        <p class="lead" style="color: aliceblue;">
+            Your one stop shop for all your travel needs
+        </p>
+    </div>
+
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group mb-3 mt-3">
+                <input aria-describedby="basic-addon1" aria-label="Search" class="form-control" placeholder="enter product name"
+                       type="text">
+                <div class="input-group-prepend">
+                    
+                    <button class="input-group-text" id="basic-addon1" style="background-color: cadetblue;">
+                        <i aria-hidden="true" class="fa fa-search" style="color: aliceblue;">
+                            search
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="cosmetic-products" >
+    <div class="container my-5" >
+        <h2 class="mb-4" >
+            Cosmetic Rewards
+        </h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product 1" class="card-img-top" src="../src\product5.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                               GUCCI - ROUGE A LEVRES SATIN
+                        </h5>
+                        <p class="card-text">
+                             Gucci celebrates Chinese New Year with a limited-edition trio of red Rouge A Levres Satin lipsticks.
+                        </p>
+                        <p class="card-text">
+                            Price: $57 (196 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity1">Qty:</label>
+                        <input id="quantity1" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+          
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product 2" class="card-img-top" src="../src\product3.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                                Charlotte Tilbury
+                        </h5>
+                        <p class="card-text">
+                         Crafted with 3D glowing pigments, this lipstick creates the illusion of cashmere-soft, lit-from-within lips. The bullet's square, mimics the shape of a lip brush for a precise application.
+                        </p>
+                        <p class="card-text">
+                            Price: $53 (182 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity2">Qty:</label>
+                        <input id="quantity2" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+                
+              <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product 3" class="card-img-top" src="../src/YSL.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                                YSL - ROUGE PUR COUTURE
+                        </h5>
+                        <p class="card-text">
+                            A wardrobe of iconic lipsticks, uniting intense colour and hydration to create a perfectly kissable pout.
+
+                            Comes in 6 shades:
+                            - 01 Le Rouge
+                            - 09 Rose Stiletto
+                            - 13 Le Orange
+                            - 19 Le Fuchsia
+                            - 52 Rouge Rose
+                            - 70 Le Nu
+                        </p>
+                        <p class="card-text">
+                            Price: $65 (223 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity3">Qty:</label>
+                        <input id="quantity3" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product 4" class="card-img-top" src="../src/lippy2.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                                Special Edition Lipstick - Laura Geller
+                        </h5>
+                        <p class="card-text">
+                             Luxurious and lightweight, this full-coverage lipstick delivers intense color and moisture in a single stroke. 
+
+“Our bullet lipstick is featherlight yet long-wearing. The perfect one-two punch.” - Laura Geller 
+
+Comes in 2 shades:
+- Broadway Plum
+- Central Park Spice
+                        </p>
+                        <p class="card-text">
+                            Price: $30 (103.2 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity4">Qty:</label>
+                        <input id="quantity4" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of row -->
+    </div> <!-- End of container -->
+
+</section>
+<section id="fragrance-products">
+    <div class="container my-5">
+        <h2 class="mb-4">
+           Fragrance Rewards
+        </h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product 5" class="card-img-top" src="../src\product4.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Giorgio Armani
+                        </h5>
+                        <p class="card-text">
+                            Experience pure opulence with the seductive Armani Privé Rose d’Arabie Eau de Parfum Intense. Powerful and elegant, creating a feast for the senses. Made with the finest ingredients.
+
+                        </p>
+                        <p class="card-text">
+                            Price: $430 (1479 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity5">Qty:</label>
+                        <input id="quantity5" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+         
+
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product 6" class="card-img-top"  src="../src\product2.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                           Black Saffron
+                        </h5>
+                        <p class="card-text">
+                            The smell, taste and colour of India - inspiriting brightness and warmth to the wearer.FRAGRANCE NOTES
+              Pomelo, juniper, saffron, black violet, leather, vetiver, raspberry and cashmere.
+                        </p>
+                        <p class="card-text">
+                            Price: $266 (912 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity6">Qty:</label>
+                        <input id="quantity6" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+                
+              <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product 7" class="card-img-top" src="../src/dolce.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Dolce & Gabbana
+                        </h5>
+                        <p class="card-text">
+                            Mens fragrance - Dolce & Gabbana
+                            premium fragrance. 
+                            Long lasting scent.
+                            The smell of success.
+                            Ladies will love you and men will want to be you. 
+                            It'll put hairs on your chest.
+                            One spray and you will be hooked.
+                        </p>
+                        <p class="card-text">
+                            Price: $88 (302 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity7">Qty:</label>
+                        <input id="quantity7" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product 8" class="card-img-top" src="../src/perfume.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                           Shalimar Perfume
+                        </h5>
+                        <p class="card-text">
+                           Ladies fragrance - Shalimar
+                            premium fragrance.
+                            Long lasting scent.
+                            The smell of success.
+                            Got man issues, this will fix it.
+                            Feel like a queen.
+                            One spray and you will be hooked.
+                            Dont be fooled by imitations.
+                            This is the real deal. Smell like a queen.
+
+                        
+
+                        </p>
+                        <p class="card-text">
+                            Price: $234 (804 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity8">Qty:</label>
+                        <input id="quantity8" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of row -->
+    </div> <!-- End of container -->
+
+</section>
+
+<section id="Alcohol-products">
+    <div class="container my-5">
+        <h2 class="mb-4">
+            Alcohol Rewards
+        </h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Moet Champagne" class="card-img-top" src="../src/product1.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Moet Champagne
+                        </h5>
+                        <p class="card-text">
+                            Moët & Chandon Impérial is a complete, generous and dynamic Champagne made of Chardonnay, Pinot Noir and Meunier. Moët Impérial is the House's iconic Champagne
+                            Drink this on a special occasion or just because you can.
+                        </p>
+                        <p class="card-text">
+                            Price: $66.95 (230 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity9">Qty:</label>
+                        <input id="quantity9" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product10" class="card-img-top" src="../src/product6.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Mumm Champagne
+                        </h5>
+                        <p class="card-text">
+                            Mumm's quality year in, year out with an explosion of freshness in the mouth, followed by strong persistence. The complex aromas of fresh fruit, yummy, caramel and vanilla just add to the pleasure.
+                        </p>
+                        <p class="card-text">
+                            Price: $76.99 (127 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity10">Qty:</label>
+                        <input id="quantity10" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+                
+              <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img alt="Product11" class="card-img-top" src="../src/BushVine.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Swartland
+                        </h5>
+                        <p class="card-text">
+                            Premium bush wine  - Swartland
+                        </p>
+                        <p class="card-text">
+                            Price: $145 (498 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity11">Qty:</label>
+                        <input id="quantity11" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-md-3 mb-4" id="prod4">
+                <div class="card h-100">
+                    <img alt="Product12" class="card-img-top" src="../src/remy.jpg"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Remy Martin
+                        </h5>
+                        <p class="card-text">
+                          Premium cognac. Yum.
+                        </p>
+                        <p class="card-text">
+                            Price: $200 (688 Points)
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <label for="quantity12">Qty:</label>
+                        <input id="quantity12" type="number" min="1" value="1" class="mb-2">
+                        <a href="#" class="btn btn-primary btn-block">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of row -->
+    </div> <!-- End of container -->
+
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Search functionality
+        const searchInput = document.querySelector('.form-control');
+        const searchButton = document.querySelector('#basic-addon1');
+        const products = document.querySelectorAll('.card-title');
+
+        // Load saved query from localStorage
+        const savedQuery = localStorage.getItem('searchQuery');
+        if(savedQuery) {
+            searchInput.value = savedQuery;
+            filterProducts(savedQuery);
+        }
+
+        searchButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            const query = searchInput.value.toLowerCase();
+            filterProducts(query);
+            localStorage.setItem('searchQuery', query);
+        });
+
+        function filterProducts(query) {
+            products.forEach(product => {
+                if(product.textContent.toLowerCase().includes(query)) {
+                    product.closest('.card').style.display = 'block';
+                } else {
+                    product.closest('.card').style.display = 'none';
+                }
+            });
+        }
+
+        // Cart functionality
+const addToCartButtons = document.querySelectorAll('.btn-primary.btn-block');
+addToCartButtons.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+        event.preventDefault();
+        const card = this.closest('.card');
+        const title = card.querySelector('.card-title').textContent.trim();
+        
+        const priceAndPointsText = card.querySelectorAll('.card-text')[1].textContent;
+        const priceMatch = priceAndPointsText.match(/Price: \$([\d\.]+)/);
+        const price = priceMatch ? parseFloat(priceMatch[1]) : 0;
+        const points = parseFloat(priceAndPointsText.split("(")[1].split(" ")[0]);
+        
+        const quantity = card.querySelector('input[type="number"]').value;
+
+        addToCart(title, price, points, quantity);
+    });
+});
+
+        function addToCart(title, price, points, quantity) {
+            const cartItem = {
+                title: title,
+                price: price,
+                points: points,
+                quantity: parseInt(quantity) // ensure quantity is an integer
+            };
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(cartItem);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            alert(title + " has been added to the cart!");
+            console.log(cart);
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

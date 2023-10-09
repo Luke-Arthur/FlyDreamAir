@@ -19,7 +19,7 @@
         align-items: center;
         min-height: 100vh;
         margin: 0;
-        background-image: url('../src/loginBg.jpg');
+        background-image: url("../src/loginBg.jpg");
         background-size: cover; /* This will cover the entire screen */
         background-repeat: no-repeat;
         background-position: center;
@@ -49,9 +49,6 @@
         font-weight: bold;
         font-family: "Montserrat", sans-serif;
       }
-
-      
-
     </style>
   </head>
   <body>
@@ -96,6 +93,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
-    <script src="../js/login.js"></script>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Retrieve user data from localStorage
+          const storedUser = JSON.parse(localStorage.getItem("user"));
+
+          const email = document.getElementById("loginEmail").value;
+          const password = document.getElementById("loginPassword").value;
+
+          if (
+            storedUser &&
+            storedUser.email === email &&
+            storedUser.password === password
+          ) {
+            alert("Logged in");
+            window.location.href = "lounge.html";
+          } else {
+            alert("Incorrect email or password!");
+          }
+        });
+    </script>
   </body>
 </html>
