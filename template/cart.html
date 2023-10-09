@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopping Cart</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="../index.html">
+        <img alt="FlyDreamAir Logo" src="../src/FDA.jpg" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalogue.html"> View Products </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html"> Login </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rego.html"> Register </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html"> Cart </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Header Section -->
+    <header class="bg-dark text-white text-center p-4">
+      <h1>Shopping Cart</h1>
+    </header>
+    <!-- Cart Section -->
+    <section class="container mt-5" id="cart">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Your Cart</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cartItems">
+              <!-- Cart items will be dynamically added here -->
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <h2>Summary</h2>
+          <div id="summary">
+            <p>
+              Total Items:
+              <span id="totalItems"> 0 </span>
+            </p>
+            <p>
+              Total Amount (Cash): $
+              <span id="totalAmountCash"> 0.00 </span>
+            </p>
+            <p>
+              Total Amount (Points):
+              <span id="totalAmountPoints"> 0 </span>
+            </p>
+          </div>
+          <h2>Payment Method</h2>
+          <div id="paymentMethod">
+            <div class="form-check">
+              <input
+                checked=""
+                class="form-check-input"
+                id="cash"
+                name="paymentMethod"
+                type="radio"
+                value="cash"
+              />
+              <label class="form-check-label" for="cash"> Cash </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                id="points"
+                name="paymentMethod"
+                type="radio"
+                value="points"
+              />
+              <label class="form-check-label" for="points"> Points </label>
+            </div>
+          </div>
+          <button class="btn btn-primary w-100 mt-3" id="checkoutBtn">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div
+      class="modal fade"
+      id="checkoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="checkoutModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="checkoutModalLabel">
+              Confirm Purchase
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to confirm your purchase?
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="confirmPurchaseBtn"
+            >
+              Confirm Purchase
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">Congratulations!</h5>
+          </div>
+          <div class="modal-body">
+            Your order is purchased. You'll receive an email with your details
+            shortly. Postage is on us :)
+            <br />
+            <strong>Would you like to go back to the homepage?</strong>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Stay Here
+            </button>
+            <button type="button" class="btn btn-primary" id="redirectToHome">
+              Go to Homepage
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cartItemsContainer = document.getElementById("cartItems");
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        renderCart();
+
+        function renderCart() {
+          let totalCash = 0;
+          let totalPoints = 0;
+
+          cartItemsContainer.innerHTML = ""; // clear cart
+          if (cart.length === 0) {
+            const row = document.createElement("tr");
+            row.innerHTML = '<td colspan="5">Your cart is empty.</td>';
+            cartItemsContainer.appendChild(row);
+          } else {
+            cart.forEach((item, index) => {
+              const itemPrice = item.price || 0; // Handle potential null or undefined values
+              const itemPoints = item.points || 0;
+
+              totalCash += itemPrice * item.quantity;
+              totalPoints += itemPoints * item.quantity;
+
+              const row = document.createElement("tr");
+              row.innerHTML = `
+                <td>${item.title}</td>
+                <td>$${itemPrice.toFixed(2)}</td>
+                <td>${item.quantity}</td>
+                <td>$${(itemPrice * item.quantity).toFixed(2)}</td>
+                <td><button class="btn btn-danger" onclick="removeItem(${index})">Remove</button></td>
+            `;
+              cartItemsContainer.appendChild(row);
+            });
+          }
+
+          document.getElementById("totalItems").textContent = cart.length;
+          document.getElementById("totalAmountCash").textContent =
+            totalCash.toFixed(2);
+          document.getElementById("totalAmountPoints").textContent =
+            totalPoints.toFixed(0);
+        }
+
+        window.removeItem = function (index) {
+          cart.splice(index, 1);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          renderCart();
+        };
+
+        document
+          .getElementById("checkoutBtn")
+          .addEventListener("click", function () {
+            if (cart.length === 0) {
+              alert("Your cart is empty.");
+              return;
+            }
+            // Show the confirmation model
+            $("#checkoutModal").modal("show");
+          });
+      });
+
+      document
+        .getElementById("confirmPurchaseBtn")
+        .addEventListener("click", function () {
+          // Hide the checkout modal
+          $("#checkoutModal").modal("hide");
+
+          // Show the success modal
+          $("#successModal").modal("show");
+
+          // Clear the cart after successful checkout
+          localStorage.removeItem("cart");
+        });
+
+      document
+        .getElementById("redirectToHome")
+        .addEventListener("click", function () {
+          window.location.href = "../index.html";
+        });
+    </script>
+  </body>
+</html>

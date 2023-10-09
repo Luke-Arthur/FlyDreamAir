@@ -1,0 +1,29 @@
+
+
+
+.card-header {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#quantity1 {
+  width: 50px;
+}
+
+#quantity1 label {
+  width: 50px;
+}
+
+.content-wrapper {
+ 
+  background-size: cover;
+ 
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  background-position: center center;
+
+  min-height: calc(100vh - 60px);
+
+}
