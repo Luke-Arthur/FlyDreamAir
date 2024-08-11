@@ -8,6 +8,8 @@ Welcome to the `FLYDREAMAIR` repository! This repository is created for collabor
 
 The FLYDREAMAIR Dream-Miles rewards loyalty system is designed with the traveller in mind. It offers rewards, points, and special exclusive privileges for our frequent flyers, making their journey more enjoyable and rewarding. This system will be available as a feature-rich web platform where users can view their points, claim rewards, and manage their account details.
 
+*** Please Note: This page is just a static website (It doesn't have a backend - it uses browser data) that was built for learning purposes, explicitly for CSIT214 @ UOW. It doesn't in any way sell or make use of any products listed. ***
+
 ## Features
 
 - **User Registration:** Users can create an account to keep track of their miles and rewards.
@@ -39,7 +41,7 @@ Please ensure your code is clean and well-commented, and thoroughly tested befor
 
 ## Project Team - Collaborators
 
-- https://github.com/MrMoorhouse (Luke's Github)
+- https://github.com/Luke-Arthur (Luke's Github)
 - https://github.com/Safal30 (Safal's Github)
 - https://github.com/Ank-sabrin (Anika's Github)
 
