@@ -51,7 +51,7 @@ Feel free to reach out to any team member with questions or concerns.
 ## Technologies Used
 
 - Front-end: (e.g., HTML, CSS, JavaScript, Bootstrap)
-- Back-end: (e.g., Flack, MongoDB)
+- Back-end: (this is a static website that uses the browser memory just to show the prototype functionality of the system. A Backend can be added later.)
 - Other tools: (e.g., Git, GitHub)
 
 ## Contact
