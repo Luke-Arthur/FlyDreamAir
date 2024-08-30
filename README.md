@@ -21,7 +21,7 @@ The FLYDREAMAIR Dream-Miles rewards loyalty system is designed with the travelle
 
 To get started with the development, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/FLYDREAMAIR.git`
+1. Clone the repository: `git clone https://github.com/Luke-Arthur/FLYDREAMAIR.git`
 2. Navigate to the project directory: `cd FLYDREAMAIR`
 3. Install the required dependencies: Run the installation command based on the technology stack used.
 4. Start the development server: Run the command to start the server based on the technology stack used.
